@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerControllerScript: MonoBehavious
+public class PlayerControllerScript: MonoBehaviour
 {
 	public float maxSpeed = 10f;
 	bool facingRight = true;
@@ -15,7 +15,7 @@ public class PlayerControllerScript: MonoBehavious
 	
 		rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
 		
-		if(move > && !facingRight)
+		if(move > 0 && !facingRight)
 			Flip ();
 		else if(move < 0 && facingRight)
 			Flip ();
